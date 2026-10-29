@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useReducer, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import MapView, { Marker, Popup } from 'react-map-gl/mapbox'
+import { Drawer } from 'vaul'
 import articles from '../../data/articles.json'
 import MultiCombobox from './MultiCombobox'
 import SiteCredits from './SiteCredits'
@@ -16,6 +17,22 @@ const SOURCES = [
 ]
 const TOKEN = import.meta.env.ACCESS_TOKEN
 const STYLE_URL = import.meta.env.STYLE_URL
+const MOBILE_QUERY = '(max-width: 800px)'
+const DRAWER_EXPANDED = 0.88
+
+function useIsMobile() {
+  const [matches, setMatches] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
+
+  useEffect(() => {
+    const media = window.matchMedia(MOBILE_QUERY)
+    const onChange = () => setMatches(media.matches)
+    onChange()
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+
+  return matches
+}
 
 function placeName(value) {
   if (!value) return ''
@@ -379,12 +396,8 @@ function StatsView({ stats }) {
 function ArticleItem({ article, selected, names, onSelect }) {
   const where = [placeName(article.neighborhood), article.quadrant].filter(Boolean).join(' · ')
   return (
-    <li>
-      <button
-        type="button"
-        className={selected ? 'selected' : undefined}
-        onClick={() => onSelect(article, true)}
-      >
+    <li className={selected ? 'article-card selected' : 'article-card'}>
+      <button type="button" onClick={() => onSelect(article, true)}>
         <span className="article-title">{article.title}</span>
         <span className="article-meta">
           {sourceLabel(articleSource(article))}
@@ -394,13 +407,23 @@ function ArticleItem({ article, selected, names, onSelect }) {
           {names ? ` · ${names}` : ''}
         </span>
       </button>
+      {article.link ? (
+        <a className="article-release" href={article.link} target="_blank" rel="noreferrer">
+          Read the release
+        </a>
+      ) : null}
     </li>
   )
 }
 
 export default function App() {
   const mapRef = useRef(null)
+  const chromeRef = useRef(null)
   const fittedSignature = useRef(null)
+  const isMobile = useIsMobile()
+  const [appNode, setAppNode] = useState(null)
+  const [peek, setPeek] = useState('96px')
+  const [snap, setSnap] = useState('96px')
   const [catalog, setCatalog] = useState([])
   const [filters, dispatch] = useReducer(filtersReducer, null, readFilters)
   const [selectedKey, setSelectedKey] = useState(null)
@@ -467,6 +490,20 @@ export default function App() {
   const offMap = filtered.filter((article) => !hasPin(article))
 
   useEffect(() => {
+    const element = chromeRef.current
+    if (!element || snap === DRAWER_EXPANDED) return undefined
+    const measure = () => {
+      const next = `${Math.ceil(element.getBoundingClientRect().height)}px`
+      setPeek((current) => (current === next ? current : next))
+      setSnap((current) => (current === DRAWER_EXPANDED || current === next ? current : next))
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [isMobile, appNode, snap, filtered.length, offMap.length])
+
+  useEffect(() => {
     writeFilters(filters)
   }, [filters])
 
@@ -509,7 +546,8 @@ export default function App() {
 
   function selectArticle(article, fly) {
     setSelectedKey(articleKey(article))
-    if (!fly || article.lat == null || article.lng == null) return
+    if (isMobile && !hasPin(article)) setSnap(DRAWER_EXPANDED)
+    if (!fly || !hasPin(article)) return
     mapRef.current?.flyTo({
       center: [article.lng, article.lat],
       zoom: 13,
@@ -517,10 +555,12 @@ export default function App() {
     })
   }
 
-  return (
-    <div className="app-shell">
-      <div className="app">
-      <aside className="panel">
+  const summary = `${filtered.length} of ${articles.length} articles${
+    offMap.length > 0 ? ` · Not on map ${offMap.length}` : ''
+  }`
+
+  const panel = (
+    <>
         <div className="panel-head">
           <div className="panel-head-top">
             <h1 className="site-brand">
@@ -653,8 +693,61 @@ export default function App() {
             )}
           </div>
         )}
-      </aside>
-      <div className="map-wrap">
+    </>
+  )
+
+  const sheetOpen = isMobile && snap === DRAWER_EXPANDED
+
+  return (
+    <div className="app-shell">
+      <div
+        className="app"
+        ref={setAppNode}
+        style={isMobile ? { '--drawer-peek': peek } : undefined}
+      >
+      {isMobile ? (
+        appNode && (
+        <Drawer.Root
+          open
+          modal={false}
+          dismissible={false}
+          container={appNode}
+          snapPoints={[peek, DRAWER_EXPANDED]}
+          activeSnapPoint={snap}
+          setActiveSnapPoint={(value) => {
+            if (value == null) return
+            setSnap(value)
+          }}
+          shouldScaleBackground={false}
+          setBackgroundColorOnScale={false}
+          repositionInputs={false}
+          noBodyStyles
+          autoFocus={false}
+        >
+          <Drawer.Portal>
+            <Drawer.Content
+              className="drawer-sheet"
+              data-expanded={sheetOpen ? 'true' : 'false'}
+            >
+              <div className="drawer-layout">
+                <div className="drawer-chrome" ref={chromeRef}>
+                  <Drawer.Handle className="drawer-handle" />
+                  <Drawer.Title className="visually-hidden">YYC Signal</Drawer.Title>
+                  <p className="drawer-summary">{summary}</p>
+                </div>
+                <Drawer.Description className="visually-hidden">
+                  Filters, list, and stats for Calgary newsroom releases.
+                </Drawer.Description>
+                <div className="drawer-body">{panel}</div>
+              </div>
+            </Drawer.Content>
+          </Drawer.Portal>
+        </Drawer.Root>
+        )
+      ) : (
+        <aside className="panel">{panel}</aside>
+      )}
+      <div className={sheetOpen ? 'map-wrap sheet-open' : 'map-wrap'}>
         {TOKEN && STYLE_URL ? (
           <>
           <MapView
@@ -681,6 +774,7 @@ export default function App() {
                   onClick={(event) => {
                     event.originalEvent.stopPropagation()
                     selectArticle(article, false)
+                    if (isMobile) setSnap(peek)
                   }}
                 >
                   <button type="button" className={pinClass} aria-label={article.title}>
