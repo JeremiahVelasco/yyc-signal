@@ -1,0 +1,11 @@
+/.DS_Store
+/Community Boundaries Oct 28 2026.csv
+.vercel
+
+node_modules/
+ingest/.venv/
+**/__pycache__/
+*.pyc
+
+.env
+.env.*

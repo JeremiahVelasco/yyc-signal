@@ -1,0 +1,561 @@
+{
+  "title": "Calgary, Alberta landmarks and selected nearby destination",
+  "count": 42,
+  "coordinate_reference_system": "WGS 84 (EPSG:4326)",
+  "coordinate_order": [
+    "latitude",
+    "longitude"
+  ],
+  "coordinate_units": "decimal_degrees",
+  "accuracy_notes": "Approximate representative map points, not surveyed coordinates or guaranteed public entrances. Large sites use one representative point. Community/neighborhood labels are descriptive and have not been spatially validated against official community polygons; cross-boundary sites may list multiple areas.",
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_attractions_and_landmarks_in_Calgary",
+    "https://www.latlong.net/place/crossiron-mills-ab-canada-33361.html",
+    "https://www.crossironmills.com/",
+    "https://en.wikipedia.org/wiki/Mount_Royal_University",
+    "https://en.wikipedia.org/wiki/Alberta_University_of_the_Arts",
+    "https://www.mtroyal.ca/maps",
+    "https://choose.bowvalleycollege.ca/"
+  ],
+  "landmarks": [
+    {
+      "id": "stampede-park",
+      "name": "Stampede Park",
+      "aliases": [],
+      "lat": 51.03361,
+      "lng": -114.05389,
+      "neighborhood": "Beltline",
+      "category": "event_grounds",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "peace-bridge",
+      "name": "Peace Bridge",
+      "aliases": [],
+      "lat": 51.05389,
+      "lng": -114.07883,
+      "neighborhood": "Eau Claire / Sunnyside",
+      "category": "bridge",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true,
+      "notes": "Spans the Bow River between Eau Claire and Sunnyside."
+    },
+    {
+      "id": "scotiabank-saddledome",
+      "name": "Scotiabank Saddledome",
+      "aliases": [],
+      "lat": 51.0375,
+      "lng": -114.05194,
+      "neighborhood": "Beltline",
+      "category": "arena",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "cf-chinook-centre",
+      "name": "CF Chinook Centre",
+      "aliases": [
+        "Chinook Centre"
+      ],
+      "lat": 50.99833,
+      "lng": -114.07389,
+      "neighborhood": "Meadowlark Park",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "crossiron-mills",
+      "name": "CrossIron Mills",
+      "aliases": [],
+      "lat": 51.20306,
+      "lng": -113.99378,
+      "neighborhood": "Balzac area",
+      "category": "shopping_mall",
+      "municipality": "Rocky View County",
+      "province": "Alberta",
+      "within_calgary_city_limits": false,
+      "notes": "Included as requested; outside Calgary city limits, near Balzac."
+    },
+    {
+      "id": "calgary-international-airport-yyc",
+      "name": "Calgary International Airport (YYC)",
+      "aliases": [
+        "YYC",
+        "Calgary International Airport"
+      ],
+      "lat": 51.11389,
+      "lng": -114.02028,
+      "neighborhood": "Calgary International Airport",
+      "category": "airport",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "wilder-institute-calgary-zoo",
+      "name": "Wilder Institute / Calgary Zoo",
+      "aliases": [
+        "Wilder Institute",
+        "Calgary Zoo"
+      ],
+      "lat": 51.04583,
+      "lng": -114.03333,
+      "neighborhood": "Bridgeland/Riverside / St. George’s Island",
+      "category": "zoo",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "cf-market-mall",
+      "name": "CF Market Mall",
+      "aliases": [
+        "Market Mall"
+      ],
+      "lat": 51.08472,
+      "lng": -114.15611,
+      "neighborhood": "Varsity",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "southcentre-mall",
+      "name": "Southcentre Mall",
+      "aliases": [],
+      "lat": 50.94167,
+      "lng": -114.06806,
+      "neighborhood": "Willow Park",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "sunridge-mall",
+      "name": "Sunridge Mall",
+      "aliases": [],
+      "lat": 51.07444,
+      "lng": -113.98583,
+      "neighborhood": "Sunridge",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "marlborough-mall",
+      "name": "Marlborough Mall",
+      "aliases": [],
+      "lat": 51.05472,
+      "lng": -113.97833,
+      "neighborhood": "Marlborough",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "the-core-shopping-centre",
+      "name": "The CORE Shopping Centre",
+      "aliases": [
+        "CORE Shopping Centre"
+      ],
+      "lat": 51.046,
+      "lng": -114.0695,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "dragon-city-mall",
+      "name": "Dragon City Mall",
+      "aliases": [],
+      "lat": 51.05061,
+      "lng": -114.06211,
+      "neighborhood": "Chinatown",
+      "category": "shopping_mall",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "university-of-calgary-main-campus",
+      "name": "University of Calgary — Main Campus",
+      "aliases": [
+        "University of Calgary",
+        "Main Campus"
+      ],
+      "lat": 51.0775,
+      "lng": -114.13306,
+      "neighborhood": "University of Calgary",
+      "category": "university",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "mount-royal-university-lincoln-park-campus",
+      "name": "Mount Royal University — Lincoln Park Campus",
+      "aliases": [
+        "Mount Royal University",
+        "Lincoln Park Campus"
+      ],
+      "lat": 51.01364,
+      "lng": -114.13348,
+      "neighborhood": "Lincoln Park",
+      "category": "university",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "alberta-university-of-the-arts",
+      "name": "Alberta University of the Arts",
+      "aliases": [],
+      "lat": 51.06205,
+      "lng": -114.09143,
+      "neighborhood": "SAIT",
+      "category": "university",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "bow-valley-college-south-campus",
+      "name": "Bow Valley College — South Campus",
+      "aliases": [
+        "Bow Valley College",
+        "South Campus"
+      ],
+      "lat": 51.0474,
+      "lng": -114.0551,
+      "neighborhood": "Downtown East Village",
+      "category": "college",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "calgary-tower",
+      "name": "Calgary Tower",
+      "aliases": [],
+      "lat": 51.04444,
+      "lng": -114.06353,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "observation_tower",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "calgary-chinese-cultural-centre",
+      "name": "Calgary Chinese Cultural Centre",
+      "aliases": [],
+      "lat": 51.05167,
+      "lng": -114.06556,
+      "neighborhood": "Chinatown",
+      "category": "cultural_centre",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "calgary-historic-city-hall",
+      "name": "Calgary Historic City Hall",
+      "aliases": [],
+      "lat": 51.045,
+      "lng": -114.05722,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "historic_building",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "devonian-gardens",
+      "name": "Devonian Gardens",
+      "aliases": [],
+      "lat": 51.046,
+      "lng": -114.07317,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "indoor_garden",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "fairmont-palliser",
+      "name": "Fairmont Palliser",
+      "aliases": [],
+      "lat": 51.04444,
+      "lng": -114.06528,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "historic_hotel",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "the-confluence-historic-site-parkland-fort-calgary",
+      "name": "The Confluence Historic Site & Parkland (Fort Calgary)",
+      "aliases": [
+        "Confluence Historic Site & Parkland (Fort Calgary)",
+        "Fort Calgary",
+        "The Confluence Historic Site & Parkland",
+        "Confluence Historic Site & Parkland"
+      ],
+      "lat": 51.04514,
+      "lng": -114.04578,
+      "neighborhood": "Downtown East Village",
+      "category": "historic_site",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "glenbow-museum",
+      "name": "Glenbow Museum",
+      "aliases": [],
+      "lat": 51.04472,
+      "lng": -114.06083,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "museum",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "shaw-millennium-park",
+      "name": "Shaw Millennium Park",
+      "aliases": [],
+      "lat": 51.04611,
+      "lng": -114.09167,
+      "neighborhood": "Downtown West End",
+      "category": "park",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "studio-bell-home-of-the-national-music-centre",
+      "name": "Studio Bell, home of the National Music Centre",
+      "aliases": [
+        "Studio Bell",
+        "home of the National Music Centre"
+      ],
+      "lat": 51.0443,
+      "lng": -114.0528,
+      "neighborhood": "Downtown East Village",
+      "category": "museum",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "princes-island-park",
+      "name": "Prince’s Island Park",
+      "aliases": [],
+      "lat": 51.055,
+      "lng": -114.0675,
+      "neighborhood": "Eau Claire",
+      "category": "park",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "stephen-avenue-walk",
+      "name": "Stephen Avenue Walk",
+      "aliases": [],
+      "lat": 51.04556,
+      "lng": -114.06556,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "pedestrian_street",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "the-bow",
+      "name": "The Bow",
+      "aliases": [],
+      "lat": 51.04778,
+      "lng": -114.06222,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "skyscraper",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "mcmahon-stadium",
+      "name": "McMahon Stadium",
+      "aliases": [],
+      "lat": 51.07028,
+      "lng": -114.12139,
+      "neighborhood": "University of Calgary",
+      "category": "stadium",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "olympic-oval",
+      "name": "Olympic Oval",
+      "aliases": [],
+      "lat": 51.07694,
+      "lng": -114.13556,
+      "neighborhood": "University of Calgary",
+      "category": "sports_venue",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "southern-alberta-jubilee-auditorium",
+      "name": "Southern Alberta Jubilee Auditorium",
+      "aliases": [],
+      "lat": 51.0625,
+      "lng": -114.09306,
+      "neighborhood": "SAIT",
+      "category": "performing_arts_venue",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "the-hangar-flight-museum",
+      "name": "The Hangar Flight Museum",
+      "aliases": [
+        "Hangar Flight Museum"
+      ],
+      "lat": 51.09417,
+      "lng": -114.01306,
+      "neighborhood": "McCall",
+      "category": "museum",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "heritage-park-historical-village",
+      "name": "Heritage Park Historical Village",
+      "aliases": [],
+      "lat": 50.98528,
+      "lng": -114.10833,
+      "neighborhood": "Eagle Ridge",
+      "category": "living_history_museum",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "the-military-museums",
+      "name": "The Military Museums",
+      "aliases": [
+        "Military Museums"
+      ],
+      "lat": 51.01444,
+      "lng": -114.11583,
+      "neighborhood": "Garrison Woods",
+      "category": "museum",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "mnp-community-sport-centre",
+      "name": "MNP Community & Sport Centre",
+      "aliases": [],
+      "lat": 51.03444,
+      "lng": -114.06333,
+      "neighborhood": "Lindsay Park",
+      "category": "recreation_centre",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "max-bell-centre",
+      "name": "Max Bell Centre",
+      "aliases": [],
+      "lat": 51.04222,
+      "lng": -114.00361,
+      "neighborhood": "Albert Park/Radisson Heights",
+      "category": "arena",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "battalion-park",
+      "name": "Battalion Park",
+      "aliases": [],
+      "lat": 51.02028,
+      "lng": -114.17139,
+      "neighborhood": "Signal Hill",
+      "category": "park",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "edworthy-park",
+      "name": "Edworthy Park",
+      "aliases": [],
+      "lat": 51.06139,
+      "lng": -114.15639,
+      "neighborhood": "Wildwood / Edworthy Park",
+      "category": "park",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "calgary-telus-convention-centre",
+      "name": "Calgary TELUS Convention Centre",
+      "aliases": [],
+      "lat": 51.04528,
+      "lng": -114.06083,
+      "neighborhood": "Downtown Commercial Core",
+      "category": "convention_centre",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "foothills-medical-centre",
+      "name": "Foothills Medical Centre",
+      "aliases": [],
+      "lat": 51.06516,
+      "lng": -114.13494,
+      "neighborhood": "St. Andrews Heights",
+      "category": "hospital",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    },
+    {
+      "id": "southland-ctrain-station",
+      "name": "Southland CTrain Station",
+      "aliases": [],
+      "lat": 50.96348,
+      "lng": -114.07657,
+      "neighborhood": "Southwood",
+      "category": "station",
+      "municipality": "Calgary",
+      "province": "Alberta",
+      "within_calgary_city_limits": true
+    }
+  ]
+}

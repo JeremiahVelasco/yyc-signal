@@ -1,0 +1,91 @@
+.about-page {
+  min-height: 100svh;
+  background: #f6f5f2;
+  color: #1c1917;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e4e0d8;
+}
+
+.about-brand {
+  display: block;
+  text-decoration: none;
+}
+
+.about-brand .site-logo {
+  display: block;
+  max-width: min(100%, 220px);
+  height: auto;
+  max-height: 36px;
+}
+
+.about-back {
+  flex: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #9a3412;
+}
+
+.about-back:hover {
+  text-decoration: underline;
+}
+
+.about-main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.about-main h1 {
+  margin: 0 0 28px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.about-main section {
+  margin-bottom: 28px;
+}
+
+.about-main h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.about-main p {
+  margin: 0 0 12px;
+  color: #44403c;
+  line-height: 1.55;
+}
+
+.about-main p:last-child {
+  margin-bottom: 0;
+}
+
+.about-main ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #44403c;
+  line-height: 1.55;
+}
+
+.about-main li {
+  margin-bottom: 10px;
+}
+
+.about-main li:last-child {
+  margin-bottom: 0;
+}
+
+.about-main a {
+  color: #9a3412;
+}

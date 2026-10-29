@@ -1,0 +1,4 @@
+certifi==2026.10.23
+feedparser==6.0.14
+feedparser-sgmllib==2.1.0
+shapely==2.2.0

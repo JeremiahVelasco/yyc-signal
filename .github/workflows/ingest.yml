@@ -1,0 +1,43 @@
+name: Ingest newsroom feeds
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install ingest dependencies
+        run: pip install -r ingest/requirements.txt
+
+      - name: Frozen regression tests
+        working-directory: ingest
+        run: python -m unittest
+
+      - name: Fetch and merge feeds
+        working-directory: ingest
+        run: python main.py
+
+      - name: Commit feed updates
+        run: |
+          if git diff --quiet -- data/articles.json data/geocode-cache.json; then
+            exit 0
+          fi
+          git add -- data/articles.json data/geocode-cache.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Update newsroom articles"
+          git push
