@@ -430,6 +430,7 @@ export default function App() {
   const [view, setView] = useState('list')
   const [mapReady, setMapReady] = useState(false)
   const [showLandmarks, setShowLandmarks] = useState(false)
+  const [filtersOpen, setFiltersOpen] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -601,6 +602,21 @@ export default function App() {
           </button>
         </div>
         <div className="filters">
+          <button
+            type="button"
+            className="filters-toggle"
+            aria-expanded={filtersOpen}
+            aria-controls="panel-filters-fields"
+            onClick={() => setFiltersOpen((open) => !open)}
+          >
+            <span className="filters-toggle-label">Filters</span>
+            {chips.length > 0 ? (
+              <span className="filters-toggle-count">{chips.length}</span>
+            ) : null}
+            <span className="filters-toggle-chevron" aria-hidden>
+              {filtersOpen ? '−' : '+'}
+            </span>
+          </button>
           {chips.length > 0 && (
             <div className="chip-row">
               <ul>
@@ -624,6 +640,8 @@ export default function App() {
               </button>
             </div>
           )}
+          {filtersOpen ? (
+            <div id="panel-filters-fields" className="filters-fields">
           <MultiCombobox
             label="Neighborhood"
             options={neighborhoodOptions}
@@ -648,6 +666,8 @@ export default function App() {
             selected={filters.landmarks}
             onToggle={(value) => dispatch({ type: 'toggle', field: 'landmarks', value })}
           />
+            </div>
+          ) : null}
         </div>
         {filtered.length === 0 ? (
           <div className="empty">
@@ -854,7 +874,7 @@ export default function App() {
         )}
       </div>
       </div>
-      <SiteCredits />
+      {!isMobile && <SiteCredits />}
     </div>
   )
 }
