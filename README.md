@@ -2,6 +2,8 @@
 
 A map-first view of Calgary newsroom releases, tagged by neighbourhood, quadrant, and landmark. Data is refreshed daily from public RSS feeds; the site is a static React app with no backend.
 
+**Live:** [yycsignal.vercel.app](https://yycsignal.vercel.app)
+
 **Code:** [github.com/JeremiahVelasco/yyc-signal](https://github.com/JeremiahVelasco/yyc-signal)
 
 For the problem statement, accuracy study, and design decisions, see [docs/project-writeup.md](docs/project-writeup.md).
@@ -43,6 +45,8 @@ python -m unittest          # regression tests (uses cached geocode, no network 
 python main.py              # fetch feeds; needs network; updates ../data/
 ```
 
+`python main.py` calls the public Nominatim server at one request per second. A fork that runs ingest on a schedule should change `NOMINATIM_USER_AGENT` in [`ingest/main.py`](ingest/main.py) so that traffic is not mixed with this project.
+
 Optional: `python main.py retag` re-tags `data/articles.json` in place using the geocode cache only; exits if any pin field changes.
 
 Rebuild street index from Calgary open data (infrequent):
@@ -68,8 +72,10 @@ Create `web/.env.local` (not committed):
 
 ```env
 ACCESS_TOKEN=your_mapbox_token
-STYLE_URL=mapbox://styles/your-account/your-style-id
+STYLE_URL=mapbox://styles/mapbox/light-v11
 ```
+
+Any public Mapbox style works. `mapbox://styles/mapbox/light-v11` needs only a free access token. The deployed site keeps its own style through the Vercel environment, so a local default does not change production.
 
 Vite also accepts `MAPBOX_*` prefixes; the app reads `ACCESS_TOKEN` and `STYLE_URL` ([`web/src/App.jsx`](web/src/App.jsx)).
 

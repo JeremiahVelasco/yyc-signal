@@ -2,6 +2,8 @@
 
 A map of Calgary news, tagged by neighbourhood, quadrant, and landmark, refreshed daily from the City newsroom RSS feeds.
 
+**Live:** [yycsignal.vercel.app](https://yycsignal.vercel.app)
+
 **Code:** [github.com/JeremiahVelasco/yyc-signal](https://github.com/JeremiahVelasco/yyc-signal)
 
 ## Overview

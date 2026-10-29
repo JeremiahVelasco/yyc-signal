@@ -4,6 +4,6 @@ The YYC Signal map and list UI lives here. Setup, ingest, deployment, and archit
 
 ```bash
 npm ci
-# create .env.local with ACCESS_TOKEN and STYLE_URL (see root README)
+# create .env.local with ACCESS_TOKEN and STYLE_URL=mapbox://styles/mapbox/light-v11 (see root README)
 npm run dev
 ```
