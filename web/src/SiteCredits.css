@@ -1,0 +1,25 @@
+.site-credits {
+  flex: none;
+  padding: 10px 16px 12px;
+  border-top: 1px solid #e4e0d8;
+  background: #f6f5f2;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #78716c;
+}
+
+.site-credits p {
+  margin: 0;
+}
+
+.site-credits p + p {
+  margin-top: 6px;
+}
+
+.site-credits a {
+  color: #9a3412;
+}
+
+.site-credits a:hover {
+  text-decoration: underline;
+}

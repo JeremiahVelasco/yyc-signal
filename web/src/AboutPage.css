@@ -1,4 +1,6 @@
 .about-page {
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   background: #f6f5f2;
   color: #1c1917;
@@ -38,7 +40,9 @@
 }
 
 .about-main {
+  flex: 1;
   max-width: 640px;
+  width: 100%;
   margin: 0 auto;
   padding: 32px 24px 48px;
 }

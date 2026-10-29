@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import MapView, { Marker, Popup } from 'react-map-gl/mapbox'
 import articles from '../../data/articles.json'
 import MultiCombobox from './MultiCombobox'
+import SiteCredits from './SiteCredits'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './App.css'
 
@@ -517,7 +518,8 @@ export default function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app-shell">
+      <div className="app">
       <aside className="panel">
         <div className="panel-head">
           <div className="panel-head-top">
@@ -757,6 +759,8 @@ export default function App() {
           </div>
         )}
       </div>
+      </div>
+      <SiteCredits />
     </div>
   )
 }

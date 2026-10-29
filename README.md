@@ -95,6 +95,40 @@ Open the dev server URL. The app reads articles from `../data/articles.json` via
 - **Frontend:** Vercel, config in [`vercel.json`](vercel.json) (`web/dist`).
 - **Data updates:** GitHub Actions only; no ingest service in production.
 
-## License / attribution
+## Licence and attribution
 
-News text and links point to the City of Calgary newsroom. This project is independent and not operated by the City. Map: Mapbox. Geocoding during ingest may use OpenStreetMap via Nominatim. Community and street data: City of Calgary open data.
+This project is independent and not operated by the City of Calgary.
+
+### Code
+
+The application source code in this repository is licensed under the [MIT License](LICENSE). That grant does not apply to third-party data bundled in `data/` or to news text.
+
+### Article text
+
+Titles and summaries in [`data/articles.json`](data/articles.json) come from the City of Calgary newsroom RSS feeds and belong to their original publishers. This project does not license that text. Each item links to the canonical release on [newsroom.calgary.ca](https://newsroom.calgary.ca).
+
+### City of Calgary open data
+
+The following datasets are used under the [Open Government Licence – City of Calgary](https://data.calgary.ca/d/Open-Data-Terms/u45n-7awa) (version 2.1). Required attribution:
+
+> Contains information licensed under the Open Government Licence – City of Calgary.
+
+| Dataset | ID | Used in |
+| --- | --- | --- |
+| [Community Boundaries](https://data.calgary.ca/Base-Maps/Community-Boundaries/ab7m-fwn6) | `ab7m-fwn6` | `data/communities.geojson`; community polygons in `data/quadrants.geojson` |
+| [Street Centreline](https://data.calgary.ca/Transportation-Transit/Street-Centreline/4dx8-rtm5) | `4dx8-rtm5` | Centreline portion of `data/street-index.json` |
+| [Parcel Address and lat/long](https://data.calgary.ca/Base-Maps/Parcel-Address-and-lat-long/s8b3-j88p) | `s8b3-j88p` | Parcel portion of `data/street-index.json` |
+
+### OpenStreetMap
+
+Geocoding during ingest uses [Nominatim](https://nominatim.openstreetmap.org/), which returns data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors under the [Open Database Licence (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/). The committed [`data/geocode-cache.json`](data/geocode-cache.json) redistributes those results and must carry that credit.
+
+[`data/quadrant-dividers.geojson`](data/quadrant-dividers.geojson) is derived from OpenStreetMap via Overpass when building quadrants and is likewise ODbL.
+
+### Other data
+
+[`data/landmarks.json`](data/landmarks.json) is compiled for this project (not a City or OSM extract) and is covered by the MIT licence.
+
+### Map basemap
+
+The interactive map uses Mapbox GL JS and Mapbox-hosted tiles. Mapbox’s attribution control remains visible on the map; Mapbox terms apply to the basemap, not to files in this repo.

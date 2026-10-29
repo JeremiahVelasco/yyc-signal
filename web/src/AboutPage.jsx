@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SiteCredits from './SiteCredits'
 import './AboutPage.css'
 
 const NEWSROOM = 'https://newsroom.calgary.ca'
@@ -112,14 +113,8 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <section>
-          <h2>Map credits</h2>
-          <p>
-            The interactive map is powered by Mapbox. Location lookup during data preparation may
-            use OpenStreetMap data via Nominatim.
-          </p>
-        </section>
       </main>
+      <SiteCredits />
     </div>
   )
 }
