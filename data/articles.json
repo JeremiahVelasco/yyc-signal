@@ -1,5 +1,29 @@
 [
   {
+    "title": "Check stops for child safety",
+    "summary": "Throughout the month of November, Calgary police officers are conducting check stops around the city to ensure drivers have properly secured child safety seats in their vehicles. There are three basic types of child safety seats: rear-facing, forward facing, and booster. Each are designed for different ages and weights and must be installed according to manufacturers instructions. Drivers operating a vehicle with a child in an improperly secured safety seat could face fines up to $211. Among the most common errors we find when checking car seats are:  - chest clips too low  - internal straps too loose  - car seats not tethered  - car seats loosely installed (with the seat belt or universal safety attachment system) The following resources are available for people wanting to learn more about car seats and how to properly install them:  Car Seat Guidelines in Alberta  Rear-facing  Forward-facing  Booster seat Road safety is a shared responsibility. Safe choices behind the wheel can help prevent collisions, reduce serious injuries & save lives as we work toward zero fatalities on Calgary roads. Join the Drive to Zero: calgary.ca/VisionZero .",
+    "link": "https://newsroom.calgary.ca/check-stops-for-child-safety/",
+    "published": "Mon, 16 Nov 2026 15:51:51 -0600",
+    "source": "police",
+    "lat": null,
+    "lng": null,
+    "neighborhood": null,
+    "quadrant": null,
+    "landmarks": []
+  },
+  {
+    "title": "Water use stays in the green zone through Grey Cup weekend as Bearspaw connection work continues",
+    "summary": "Calgary and neighbouring communities have kept the green streak alive for 12 days in a row! Water use was 474 million litres on Saturday and 490 million litres on Sunday, even with Grey Cup festivities in full swing. Keeping water usage below 500 million litres is important during the connection of the new Bearspaw South Feeder Main, as The City is limited in how much water it can move throughout the water system. By continuing to pull together to save water, you're helping keep our system running well, with enough water for firefighting and the everyday services you count on. Thank you for your dedicated water-saving actions. In the spirit of the Grey Cup this past weekend, let's take the green zone into the end zone while we complete the remaining few weeks of work. Construction update Work is progressing at all three locations where the new feeder main will be connected to the water system. Near the Shaganappi Pump Station, work is progressing on schedule. All of the sections of pipe running east-west have been placed and welding continued through the weekend. At 33 Avenue and 89 Street N.W., crews are installing the final pieces of pipe that link the new feeder main and valve chamber to the steel pipe that connects to the Bearspaw Water Treatment Plant. Excavation is complete and all pipes and valves are exposed, ready for the final tie-in connection work to begin. Last night, crews began working 24 hours a day at this location, and will continue for approximately 10 days. We are very grateful to the surrounding community for their patience and understanding as we work to finish as quickly as possible. At the 83 Street N.W. location, work is progressing on schedule, and excavation is underway to expose the pipes. Traffic and pedestrian detours remain in place in the area, and again, we really appreciate everyone's patience as this work continues. Parkdale Boulevard: Work on Parkdale Boulevard, where we are completing additional repairs on a number of sections of pipe between Shaganappi Pump Station and Memorial Pump Station. Welding is underway across all worksites. Stay informed For the latest updates, practical tips and resources for residents and businesses, visit calgary.ca/savewater .",
+    "link": "https://newsroom.calgary.ca/water-use-stays-in-the-green-zone-through-grey-cup-weekend-as-bearspaw-connection-work-continues/",
+    "published": "Mon, 16 Nov 2026 09:04:07 -0600",
+    "source": "city",
+    "lat": 51.09503,
+    "lng": -114.22096,
+    "neighborhood": "BOWNESS",
+    "quadrant": "NW",
+    "landmarks": []
+  },
+  {
     "title": "Police investigate fatal shooting",
     "summary": "Officers are currently on scene investigating a fatal shooting that occurred this morning in the northwest community of Bowness. On Sunday, Nov. 15, 2026, at approximately 8:50 a.m., we were called to the parking lot of a Real Canadian Superstore, located at 3400 69 St. N.W., for reports of shots being fired. Upon arrival, officers located one man who was deceased. Police continue to investigate the death. At this time, this shooting is believed to be an isolated act with no active risk to the public. No suspects are in custody at this time. While no road closures are in effect, we are asking the public to please refrain from accessing the area as investigators continue to work and assess the scene. “While early evidence suggests that this is an isolated attack, we fully understand that any act of violence – especially in public – is alarming for the community,” says Acting Staff Sergeant Mark Neufeld of the Calgary Police Service Homicide Unit. “Our focus is on quickly containing the situation, identifying those responsible, and working with the community to gather as much information as possible.” An autopsy will be conducted by The Office of The Chief Medical Examiner in the coming days. More information will be shared as it becomes available. Addressing gun violence continues to be a priority for our Service. Through investigation, prevention and enforcement activities we have co-ordinated our resources to reduce victimization and enhance community safety. Our efforts to address this issue rely on strong community support. We are asking anyone who may have witnessed the incident, or who may have dashcam or CCTV footage from the area at the time of the shooting to contact police by calling 403-266-1234. Case # CA26527754/4159",
     "link": "https://newsroom.calgary.ca/police-investigate-fatal-shooting-26527754/",
@@ -920,19 +944,5 @@
     "neighborhood": "SOUTH AIRWAYS",
     "quadrant": "NE",
     "landmarks": []
-  },
-  {
-    "title": "Update #2: Suspect identified and charges laid in random sexual assault",
-    "summary": "In August 2026, we sought the public's assistance in identifying a vehicle believed to be involved in a random sexual assault at the Southland CTrain Station. On Tuesday, Aug. 25, 2026, at around 1 a.m., officers were called to the Southland CTrain Station parking lot, located at 10158 Sacramento Dr. S.W., after witnesses reported a vulnerable woman in distress who appeared to have been sexually assaulted. The victim was transported to hospital in stable condition. Investigators believe the woman did not know the man prior to the attack. On the night of the assault, police responded immediately, conducted extensive local enquiries and collected evidence from the scene. The investigation ultimately led to the suspect's arrest and subsequent charges. As a result, Sedat KAYA, 25, is charged with one count of sexual assault. KAYA is expected to appear in court on Friday, Nov. 27, 2026. Anyone with information about this incident is asked to contact police by calling 403-266-1234. Tips can also be submitted anonymously to Crime Stoppers through any of the following methods: TALK: 1-800-222-8477 TYPE: www.calgarycrimestoppers.org APP: P3 Tips Case # 26385704/5479",
-    "link": "https://newsroom.calgary.ca/update-2-suspect-identified-and-charges-laid-in-random-sexual-assault/",
-    "published": "Fri, 16 Oct 2026 14:38:58 -0600",
-    "source": "police",
-    "lat": 50.96362,
-    "lng": -114.07877,
-    "neighborhood": "SOUTHWOOD",
-    "quadrant": "SW",
-    "landmarks": [
-      "southland-ctrain-station"
-    ]
   }
 ]
